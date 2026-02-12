@@ -44,7 +44,15 @@ cd blazor-richtexteditor-webspellchecker
 cd Web_Spell_Checker
 ```
 
-### Step 3: Restore NuGet Packages
+### Step 3: Set up the WProofreader SDK
+
+For integrating the Spell Checker you need to install the below NPM package:
+
+```bash
+npm install @webspellchecker/wproofreader-sdk-js
+```
+
+### Step 4: Restore NuGet Packages
 
 ```bash
 dotnet restore
@@ -54,13 +62,13 @@ This will download all required dependencies including:
 - Syncfusion.Blazor.RichTextEditor
 - Syncfusion.Blazor.Themes
 
-### Step 4: Build the Project
+### Step 5: Build the Project
 
 ```bash
 dotnet build
 ```
 
-### Step 5: Run the Application
+### Step 6: Run the Application
 
 ```bash
 dotnet run
