@@ -2,7 +2,6 @@
 
 [![.NET Version](https://img.shields.io/badge/.NET-10.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
 [![Syncfusion](https://img.shields.io/badge/Syncfusion-Blazor-orange)](https://www.syncfusion.com/blazor-components)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ## Overview
 
@@ -12,7 +11,6 @@ This project demonstrates a professional integration of **Syncfusion Blazor Rich
 
 - **Syncfusion Blazor Rich Text Editor**: Enterprise-grade WYSIWYG editor with extensive formatting capabilities
 - **WProofreader**: AI-powered spell checking and grammar correction engine
-- **Blazor Server**: High-performance server-side rendering with real-time interactivity
 
 ## Features
 
