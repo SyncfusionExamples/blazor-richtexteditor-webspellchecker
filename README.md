@@ -172,6 +172,6 @@ The theme stylesheet and script can be accessed from NuGet through Static Web As
 - [Syncfusion Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started)
 - [WProofreader Documentation](https://docs.webspellchecker.net/)
 - [Blazor Documentation](https://learn.microsoft.com/aspnet/core/blazor/)
-- [.NET 10 Release Notes](https://learn.microsoft.com/dotnet/core/whats-new/dotnet-10)
+- [.NET 10 Release Notes](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-10.0?view=aspnetcore-10.0)
 
 **Note**: This is a demonstration project. For production use, ensure you have valid licenses for both Syncfusion components and WProofreader service, and implement appropriate security measures.
