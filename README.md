@@ -167,25 +167,6 @@ The theme stylesheet and script can be accessed from NuGet through Static Web As
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-### Adding More Editor Features
-
-Enhance the editor by adding toolbar items in `RichTextEditorWithSpellChecker.razor`:
-
-```razor
-<SfRichTextEditor>
-    <RichTextEditorToolbarSettings Items="@Tools" />
-</SfRichTextEditor>
-
-@code {
-    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
-    {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        // Add more toolbar items
-    };
-}
-```
-
 ### Documentation
 
 - [Syncfusion Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started)
