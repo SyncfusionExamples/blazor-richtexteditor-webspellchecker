@@ -65,11 +65,10 @@ The application will start at `https://localhost:5001` (or the port shown in you
 ### Accessing the Spell Checker
 
 1. Navigate to the application in your browser
-2. Click on the **"Spell Checker"** menu item or go to `/spell-checker` route
-3. Start typing or paste existing text into the editor
-4. Misspelled words will be underlined automatically
-5. Hover over underlined words to see correction suggestions
-6. Click a suggestion to apply the correction
+2. Start typing or paste existing text into the editor
+3. Misspelled words will be underlined automatically
+4. Hover over underlined words to see correction suggestions
+5. Click a suggestion to apply the correction
 
 ### Example Text
 
