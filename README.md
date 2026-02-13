@@ -52,7 +52,27 @@ For integrating the Spell Checker you need to install the below NPM package:
 npm install @webspellchecker/wproofreader-sdk-js
 ```
 
-### Step 4: Restore NuGet Packages
+### Step 4: WProofreader Configuration
+
+The spell checker is configured in `wwwroot/scripts/spell-checker.js`:
+
+```javascript
+window.WEBSPELLCHECKER_CONFIG = {
+    serviceId: 'YOUR_SERVICE_ID',      // Replace with your WProofreader service ID
+    autoSearch: true,                   // Enable automatic spell checking
+    lang: 'en_US',                      // Default language
+    selectors: [
+        { selector: rteContainer }      // Target the RTE container
+    ]
+};
+```
+
+**Important**: Replace `serviceId` with your own WProofreader service ID. You can obtain one by:
+1. Visiting [WebSpellChecker](https://webspellchecker.com/)
+2. Creating an account
+3. Copying your service ID from the dashboard
+
+### Step 5: Restore NuGet Packages
 
 ```bash
 dotnet restore
@@ -62,13 +82,13 @@ This will download all required dependencies including:
 - Syncfusion.Blazor.RichTextEditor
 - Syncfusion.Blazor.Themes
 
-### Step 5: Build the Project
+### Step 6: Build the Project
 
 ```bash
 dotnet build
 ```
 
-### Step 6: Run the Application
+### Step 7: Run the Application
 
 ```bash
 dotnet run
@@ -122,28 +142,6 @@ blazor-richtexteditor-webspellchecker/
 │   └── Web_Spell_Checker.csproj          # Project file
 ├── README.md                             # This file
 ```
-
-## Configuration
-
-### WProofreader Configuration
-
-The spell checker is configured in `wwwroot/scripts/spell-checker.js`:
-
-```javascript
-window.WEBSPELLCHECKER_CONFIG = {
-    serviceId: 'YOUR_SERVICE_ID',      // Replace with your WProofreader service ID
-    autoSearch: true,                   // Enable automatic spell checking
-    lang: 'en_US',                      // Default language
-    selectors: [
-        { selector: rteContainer }      // Target the RTE container
-    ]
-};
-```
-
-**Important**: Replace `serviceId` with your own WProofreader service ID. You can obtain one by:
-1. Visiting [WebSpellChecker](https://webspellchecker.com/)
-2. Creating an account
-3. Copying your service ID from the dashboard
 
 ### Syncfusion License
 
