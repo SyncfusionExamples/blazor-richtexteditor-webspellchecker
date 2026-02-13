@@ -143,6 +143,8 @@ blazor-richtexteditor-webspellchecker/
 ├── README.md                             # This file
 ```
 
+## Configuration
+
 ### Syncfusion License
 
 For production use, you need a valid Syncfusion license.
