@@ -1,0 +1,59 @@
+@page "/"
+
+@using Syncfusion.Blazor.RichTextEditor
+@inject IJSRuntime JS
+
+@* 
+    Rich Text Editor with Web Spell Checker Integration
+    
+    This component demonstrates the integration of Syncfusion Blazor Rich Text Editor
+    with WProofreader (Web Spell Checker) for real-time spell checking and grammar correction.
+*@
+
+<PageTitle>Spell Checker - Rich Text Editor</PageTitle>
+
+<div class="control-section">
+    <div class="content-wrapper">
+        <h3>Rich Text Editor with Spell Checker</h3>
+        <p class="mb-3">
+            Type or paste your content below. Spelling and grammar errors will be automatically 
+            highlighted. Hover over underlined text to see correction suggestions.
+        </p>
+        
+        <SfRichTextEditor ID="@rteId" @ref="rte" Value="@initialHtml">
+            <RichTextEditorEvents Created="@Created"></RichTextEditorEvents>
+        </SfRichTextEditor>
+    </div>
+</div>
+
+@code {
+    /// <summary>
+    /// Reference to the Syncfusion Rich Text Editor component
+    /// </summary>
+    private SfRichTextEditor? rte;
+    
+    /// <summary>
+    /// Unique identifier for the Rich Text Editor instance
+    /// Used for JavaScript interop to initialize WProofreader
+    /// </summary>
+    private string rteId = "sfrichtexteditor";
+    
+    /// <summary>
+    /// Initial HTML content with demonstration text
+    /// Contains intentional errors to showcase spell checker functionality
+    /// </summary>
+    private string initialHtml = @"<p>Enter you're text here with real spelling and grammer mistakes to see how WProofreader work. Alot of potential errors will be underlined; hover on the marked wods for instant correction suggesstions.</p>";
+
+    /// <summary>
+    /// Event handler called when the Rich Text Editor is created
+    /// Initializes WProofreader spell checking for the editor
+    /// </summary>
+    private async Task Created()
+    {
+        // Get the editor ID (use component ID or fallback to default)
+        var id = rte?.ID ?? rteId;
+        
+        // Initialize WProofreader via JavaScript interop
+        await JS.InvokeVoidAsync("initializeWebSpellChecker", id);
+    }
+}
