@@ -35,7 +35,7 @@ window.initializeWebSpellChecker = function (sfId) {
         // Service ID from WebSpellChecker account
         // IMPORTANT: Replace with your own service ID for production
         // Get your service ID at: https://webspellchecker.com/
-        serviceId: '5jlo7CLITikr84b',
+        serviceId: 'YOUR_SERVICE_ID',
         
         // Enable automatic spell checking as user types
         autoSearch: true,
